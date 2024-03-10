@@ -10,7 +10,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f3f5f8;
+            background-color: #f3f1e6; /* Beige cream color */
             color: #333;
             transition: background-color 0.3s, color 0.3s;
             text-align: center;
@@ -18,7 +18,7 @@
 
         /* Navigation styling */
         nav {
-            background-color: #3884ff;
+            background-color: #3884ff; /* Light blue accent color */
             color: #fff;
             padding: 10px 20px;
             display: flex;
@@ -41,8 +41,8 @@
 
         /* Dark mode button styling */
         #dark-mode-toggle {
-            background-color: #3884ff;
-            color: #fff;
+            background-color: #fff; /* White */
+            color: #333;
             border: none;
             border-radius: 50%;
             width: 40px;
@@ -54,8 +54,7 @@
         }
 
         #dark-mode-toggle:hover {
-            background-color: #4e9bff;
-            color: #fff;
+            background-color: #e0e0e0; /* Lighter gray on hover */
         }
 
         /* Main content styling */
@@ -66,10 +65,10 @@
 
         /* Footer styling */
         footer {
-            background-color: #3884ff;
+            background-color: #3884ff; /* Light blue accent color */
             color: #fff;
             text-align: center;
-            padding: 20px;
+            padding: 40px; /* Increased footer size */
         }
 
         /* Emoji styling */
@@ -100,7 +99,7 @@
         }
 
         .contact-form button {
-            background-color: #3884ff;
+            background-color: #3884ff; /* Light blue accent color */
             color: #fff;
             padding: 10px 20px;
             border: none;
@@ -119,8 +118,9 @@
         <div>TysonCantLua</div>
         <div>
             <a href="#">Home</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+            <a href="#">About</a>
+            <a href="#">Music</a>
+            <a href="#">Contact</a>
         </div>
         <button id="dark-mode-toggle" class="emoji">🌛</button>
     </nav>
@@ -155,15 +155,16 @@
             body.classList.toggle('dark-mode');
             if (body.classList.contains('dark-mode')) {
                 darkModeToggle.innerHTML = '🌞';
-                darkModeToggle.style.backgroundColor = '#fff';
-                darkModeToggle.style.color = '#333';
+                darkModeToggle.style.backgroundColor = '#333'; /* Current color */
+                darkModeToggle.style.color = '#fff'; /* White */
             } else {
                 darkModeToggle.innerHTML = '🌛';
-                darkModeToggle.style.backgroundColor = '#3884ff';
-                darkModeToggle.style.color = '#fff';
+                darkModeToggle.style.backgroundColor = '#fff'; /* White */
+                darkModeToggle.style.color = '#333'; /* Current color */
             }
         });
     </script>
 
 </body>
 </html>
+
