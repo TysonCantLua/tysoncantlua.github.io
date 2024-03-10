@@ -10,7 +10,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f3f1e6; /* Beige cream color */
+            background-color: #f3f0e2; /* Updated background color */
             color: #333;
             transition: background-color 0.3s, color 0.3s;
             text-align: center;
@@ -18,7 +18,7 @@
 
         /* Navigation styling */
         nav {
-            background-color: #3884ff; /* Light blue accent color */
+            background-color: #92b6d5; /* Light blue accent color */
             color: #fff;
             padding: 10px 20px;
             display: flex;
@@ -36,12 +36,12 @@
         }
 
         nav a:hover {
-            background-color: #4e9bff;
+            background-color: #6d95b8; /* Light blue accent color on hover */
         }
 
         /* Dark mode button styling */
         #dark-mode-toggle {
-            background-color: #fff; /* White */
+            background-color: #92b6d5; /* Light blue accent color */
             color: #333;
             border: none;
             border-radius: 50%;
@@ -54,7 +54,8 @@
         }
 
         #dark-mode-toggle:hover {
-            background-color: #e0e0e0; /* Lighter gray on hover */
+            background-color: #6d95b8; /* Light blue accent color on hover */
+            color: #fff;
         }
 
         /* Main content styling */
@@ -65,7 +66,7 @@
 
         /* Footer styling */
         footer {
-            background-color: #3884ff; /* Light blue accent color */
+            background-color: #92b6d5; /* Light blue accent color */
             color: #fff;
             text-align: center;
             padding: 40px; /* Increased footer size */
@@ -99,7 +100,7 @@
         }
 
         .contact-form button {
-            background-color: #3884ff; /* Light blue accent color */
+            background-color: #92b6d5; /* Light blue accent color */
             color: #fff;
             padding: 10px 20px;
             border: none;
@@ -108,7 +109,7 @@
         }
 
         .contact-form button:hover {
-            background-color: #4e9bff;
+            background-color: #6d95b8; /* Light blue accent color on hover */
         }
     </style>
 </head>
@@ -121,6 +122,7 @@
             <a href="#">About</a>
             <a href="#">Music</a>
             <a href="#">Contact</a>
+            <a href="links.html">Links</a>
         </div>
         <button id="dark-mode-toggle" class="emoji">🌛</button>
     </nav>
@@ -155,12 +157,12 @@
             body.classList.toggle('dark-mode');
             if (body.classList.contains('dark-mode')) {
                 darkModeToggle.innerHTML = '🌞';
-                darkModeToggle.style.backgroundColor = '#333'; /* Current color */
-                darkModeToggle.style.color = '#fff'; /* White */
+                darkModeToggle.style.backgroundColor = '#fff'; /* Change toggle button color to white in dark mode */
+                darkModeToggle.style.color = '#333';
             } else {
                 darkModeToggle.innerHTML = '🌛';
-                darkModeToggle.style.backgroundColor = '#fff'; /* White */
-                darkModeToggle.style.color = '#333'; /* Current color */
+                darkModeToggle.style.backgroundColor = '#92b6d5'; /* Light blue accent color */
+                darkModeToggle.style.color = '#333';
             }
         });
     </script>
