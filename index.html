@@ -185,11 +185,14 @@
             const body = document.body;
             const darkModeToggle = document.getElementById('dark-mode-toggle');
 
-            body.classList.toggle('dark-mode');
-            if (body.classList.contains('dark-mode')) {
-                darkModeToggle.innerHTML = '🌞';
+            if (body.style.backgroundColor === 'rgb(51, 51, 51)') { // Checking if dark mode is active
+                body.style.backgroundColor = '#fff'; // Switching to light mode
+                body.style.color = '#000';
+                darkModeToggle.innerHTML = '🌞'; // Toggle button shows sun for light mode
             } else {
-                darkModeToggle.innerHTML = '🌛';
+                body.style.backgroundColor = '#333'; // Switching to dark mode
+                body.style.color = '#fff';
+                darkModeToggle.innerHTML = '🌛'; // Toggle button shows moon for dark mode
             }
         }
     </script>
