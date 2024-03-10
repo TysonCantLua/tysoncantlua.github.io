@@ -10,15 +10,14 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f3f0e2; /* Updated background color */
-            color: #333;
-            transition: background-color 0.3s, color 0.3s;
+            background-color: #333; /* Dark mode by default */
+            color: #fff;
             text-align: center;
         }
 
         /* Navigation styling */
         nav {
-            background-color: #92b6d5; /* Light blue accent color */
+            background-color: #444;
             color: #fff;
             padding: 10px 20px;
             display: flex;
@@ -36,13 +35,13 @@
         }
 
         nav a:hover {
-            background-color: #6d95b8; /* Light blue accent color on hover */
+            background-color: #555;
         }
 
         /* Dark mode button styling */
         #dark-mode-toggle {
-            background-color: #92b6d5; /* Light blue accent color */
-            color: #333;
+            background-color: #444;
+            color: #fff;
             border: none;
             border-radius: 50%;
             width: 40px;
@@ -54,19 +53,18 @@
         }
 
         #dark-mode-toggle:hover {
-            background-color: #6d95b8; /* Light blue accent color on hover */
-            color: #fff;
+            background-color: #555;
         }
 
         /* Main content styling */
         main {
             padding: 20px;
-            text-align: left;
+            text-align: center; /* Centering all text */
         }
 
         /* Footer styling */
         footer {
-            background-color: #92b6d5; /* Light blue accent color */
+            background-color: #444;
             color: #fff;
             text-align: center;
             padding: 40px; /* Increased footer size */
@@ -100,7 +98,7 @@
         }
 
         .contact-form button {
-            background-color: #92b6d5; /* Light blue accent color */
+            background-color: #444;
             color: #fff;
             padding: 10px 20px;
             border: none;
@@ -109,31 +107,31 @@
         }
 
         .contact-form button:hover {
-            background-color: #6d95b8; /* Light blue accent color on hover */
+            background-color: #555;
         }
 
-        /* Dark mode styles */
-        body.dark-mode {
-            background-color: #333;
-            color: #fff;
+        /* Link list styling */
+        ul {
+            list-style-type: none;
+            padding: 0;
         }
 
-        body.dark-mode nav {
-            background-color: #444;
+        ul li {
+            margin-bottom: 10px;
         }
 
-        body.dark-mode nav a {
-            color: #fff;
-        }
-
-        body.dark-mode #dark-mode-toggle {
+        ul li a {
+            display: inline-block;
+            padding: 10px 20px;
             background-color: #444;
             color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
         }
 
-        body.dark-mode footer {
-            background-color: #444;
-            color: #fff;
+        ul li a:hover {
+            background-color: #555;
         }
     </style>
 </head>
@@ -144,19 +142,26 @@
         <div>
             <a href="#">Home</a>
             <a href="#">About</a>
-            <a href="links.html">Links</a>
+            <a href="#links">Links</a>
             <a href="#">Contact</a>
         </div>
         <button id="dark-mode-toggle" class="emoji">🌛</button>
     </nav>
 
     <main>
-        <h2>Welcome to TysonCantLua's Website</h2>
+        <h1>Welcome to TysonCantLua's Website</h1>
         <p>Explore the world of music! 🎶</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis tristique lectus. Nullam condimentum ligula vitae enim faucibus, at cursus ipsum dapibus.</p>
         <p>Nulla facilisi. Proin dapibus efficitur dolor, eu feugiat velit tincidunt eget. Suspendisse eget faucibus massa. Nulla facilisi.</p>
 
-        <h3>Contact TysonCantLua</h3>
+        <section id="links">
+            <h2>Useful Links</h2>
+            <ul>
+                <li><a href="https://youtube.com/@tysoncantlua">Youtube</a></li>
+            </ul>
+        </section>
+
+        <h2>Contact TysonCantLua</h2>
         <div class="contact-form">
             <form action="https://formspree.io/your_email_here" method="POST">
                 <input type="text" name="name" placeholder="Your Name" required>
@@ -173,8 +178,11 @@
 
     <script>
         const body = document.body;
-        const nav = document.querySelector('nav');
         const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+        // Set dark mode by default
+        body.classList.add('dark-mode');
+        darkModeToggle.innerHTML = '🌞'; // Toggle button shows sun for dark mode
 
         darkModeToggle.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
@@ -188,3 +196,4 @@
 
 </body>
 </html>
+
