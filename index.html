@@ -25,15 +25,11 @@
 
         /* Navigation styling */
         nav {
-            position: fixed;
-            top: 50%;
-            left: 20px;
-            transform: translateY(-50%);
             background-color: #333;
-            border-radius: 10px;
-            padding: 10px;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: flex-end;
         }
 
         nav a {
@@ -60,32 +56,16 @@
             font-size: 20px;
             cursor: pointer;
             transition: background-color 0.3s;
-            position: relative;
-            overflow: hidden;
+            margin-left: 10px;
         }
 
-        #dark-mode-toggle:before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: #fff;
-            animation: pulse 2s infinite;
-            transition: width 0.3s, height 0.3s;
-        }
-
-        #dark-mode-toggle.dark-mode:before {
-            width: 40px;
-            height: 40px;
+        #dark-mode-toggle:hover {
+            background-color: #555;
         }
 
         /* Main content styling */
         main {
-            padding: 100px 20px 20px;
+            padding: 20px;
         }
 
         /* Footer styling */
@@ -94,9 +74,6 @@
             color: #fff;
             text-align: center;
             padding: 20px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
         }
 
         /* Emoji styling */
@@ -137,17 +114,6 @@
         .contact-form button:hover {
             background-color: #555;
         }
-
-        @keyframes pulse {
-            0% {
-                transform: translate(-50%, -50%) scale(0.5);
-                opacity: 1;
-            }
-            100% {
-                transform: translate(-50%, -50%) scale(1.5);
-                opacity: 0;
-            }
-        }
     </style>
 </head>
 <body>
@@ -187,17 +153,15 @@
 
     <script>
         const body = document.body;
-        body.classList.add('dark-mode');
-
         const nav = document.querySelector('nav');
         const darkModeToggle = document.getElementById('dark-mode-toggle');
 
         darkModeToggle.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
             if (body.classList.contains('dark-mode')) {
-                darkModeToggle.innerHTML = '🌛';
-            } else {
                 darkModeToggle.innerHTML = '🌞';
+            } else {
+                darkModeToggle.innerHTML = '🌛';
             }
         });
     </script>
