@@ -145,7 +145,7 @@
             <a href="#links">Links</a>
             <a href="#">Contact</a>
         </div>
-        <button id="dark-mode-toggle" class="emoji">🌛</button>
+        <button id="dark-mode-toggle" class="emoji" onclick="toggleDarkMode()">🌛</button>
     </nav>
 
     <main>
@@ -157,7 +157,11 @@
         <section id="links">
             <h2>Useful Links</h2>
             <ul>
-                <li><a href="https://youtube.com/@tysoncantlua">YouTube</a></li>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+                <li><a href="#">Link 5</a></li>
             </ul>
         </section>
 
@@ -177,21 +181,17 @@
     </footer>
 
     <script>
-        const body = document.body;
-        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        function toggleDarkMode() {
+            const body = document.body;
+            const darkModeToggle = document.getElementById('dark-mode-toggle');
 
-        // Set dark mode by default
-        body.classList.add('dark-mode');
-        darkModeToggle.innerHTML = '🌞'; // Toggle button shows sun for dark mode
-
-        darkModeToggle.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
             if (body.classList.contains('dark-mode')) {
                 darkModeToggle.innerHTML = '🌞';
             } else {
                 darkModeToggle.innerHTML = '🌛';
             }
-        });
+        }
     </script>
 
 </body>
