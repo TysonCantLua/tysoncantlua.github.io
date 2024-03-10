@@ -15,21 +15,20 @@
             transition: background-color 0.3s, color 0.3s;
         }
 
-        /* Header styling */
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
         /* Navigation styling */
         nav {
-            background-color: #333;
+            background-color: #34515e;
             color: #fff;
             padding: 10px 20px;
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
         }
 
         nav a {
@@ -37,17 +36,17 @@
             text-decoration: none;
             padding: 10px 20px;
             margin: 0 10px;
-            border-radius: 5px;
+            border-radius: 20px;
             transition: background-color 0.3s;
         }
 
         nav a:hover {
-            background-color: #555;
+            background-color: #4d7d8a;
         }
 
         /* Dark mode button styling */
         #dark-mode-toggle {
-            background-color: #333;
+            background-color: #72a6b2;
             color: #fff;
             border: none;
             border-radius: 50%;
@@ -60,20 +59,23 @@
         }
 
         #dark-mode-toggle:hover {
-            background-color: #555;
+            background-color: #93c1cc;
         }
 
         /* Main content styling */
         main {
-            padding: 20px;
+            padding: 100px 20px 20px;
         }
 
         /* Footer styling */
         footer {
-            background-color: #333;
+            background-color: #34515e;
             color: #fff;
             text-align: center;
             padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
 
         /* Emoji styling */
@@ -103,7 +105,7 @@
         }
 
         .contact-form button {
-            background-color: #333;
+            background-color: #34515e;
             color: #fff;
             padding: 10px 20px;
             border: none;
@@ -112,21 +114,20 @@
         }
 
         .contact-form button:hover {
-            background-color: #555;
+            background-color: #4d7d8a;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>TysonCantLua - Music Artist</h1>
-    </header>
-
     <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Music</a>
-        <a href="#">Contact</a>
+        <div>TysonCantLua</div>
+        <div>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Music</a>
+            <a href="#">Contact</a>
+        </div>
         <button id="dark-mode-toggle" class="emoji">🌛</button>
     </nav>
 
